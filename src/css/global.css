@@ -1,0 +1,9 @@
+.container{
+    display:block;
+    text-align:center
+}
+.poke-selector{
+    justify-content: center;
+    flex:1;
+    background:#ccc;
+}
