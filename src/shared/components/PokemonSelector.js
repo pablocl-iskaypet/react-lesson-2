@@ -1,7 +1,7 @@
 import {useEffect,useCallback,useState,React} from 'react';
 
 const PokemonSelector = (props) =>{
-    const [pokemonID,SetPokemonID] = useState(10);
+    const [pokemonID,SetPokemonID] = useState(25);
     const [data,SetData] = useState();
 
     function increment() {
@@ -33,7 +33,8 @@ const PokemonSelector = (props) =>{
             </div>
             <h3>{pokemonID}</h3>
             {
-            data && data.sprites && data.sprites.front_default && <img alt={data.name} src={data.sprites.front_default} />
+            (data && data.sprites && data.sprites.front_default && <><h4>{data.name}</h4><img alt={data.name} src={data.sprites.front_default} /></>)
+            || (!data && <div>Loading...</div>)
             }
         </div>
     )
